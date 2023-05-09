@@ -32,7 +32,7 @@ const Home: React.FC<ApiData> = ({
   return (
     <div>
       <div className="flex items-center ">
-        <div className="bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
+        <div className="text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
           <Setup
             title={title}
             instructions={instructions}
@@ -45,5 +45,7 @@ const Home: React.FC<ApiData> = ({
     </div>
   );
 };
+
+// bg - base - 100;
 
 export default Home;

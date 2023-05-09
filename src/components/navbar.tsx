@@ -1,6 +1,34 @@
+import React, { useState, useEffect } from "react";
+
+// renders server-side, so we need to check if localStorage is available
+const loadTheme = () => {
+  if (typeof localStorage === "undefined") {
+    return "light";
+  }
+  const value = localStorage.getItem("theme");
+  return value === null ? "light" : value;
+};
+
 const NavBar: React.FC = () => {
+  const [theme, setTheme] = useState(loadTheme);
+
+  useEffect(() => {
+    if (typeof theme === "string") {
+      localStorage.setItem("theme", theme);
+    }
+    const localTheme = localStorage.getItem("theme");
+    if (typeof localTheme == "string") {
+      document.documentElement.setAttribute("data-theme", localTheme);
+    }
+  }, [theme]);
+
+  const handleClick = () => {
+    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-200 mb-20">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -39,22 +67,7 @@ const NavBar: React.FC = () => {
         <a className="btn btn-ghost normal-case text-3xl">NextWork</a>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
+        <input type="checkbox" className="toggle" onClick={handleClick} />
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
             <svg
