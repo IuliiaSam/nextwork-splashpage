@@ -7,12 +7,14 @@ const AboutUs: React.FC<AboutUsProps> = ({ devProfiles }) => {
         Meet the <u className="text-blue-600">team</u>
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-xl-12">
-        {devProfiles.map(({ name, image, title }, index) => {
+        {devProfiles.map(({ name, image, title, linkedIn, github }, index) => {
           return (
             <TeamProfileCard
               name={name}
               image={image}
               title={title}
+              linkedIn={linkedIn}
+              github={github}
               key={`devName${index}`}
             />
           );

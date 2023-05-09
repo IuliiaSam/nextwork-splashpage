@@ -1,12 +1,13 @@
-import { TeamProfileCardProps } from "../../types/instructions";
-
-const TeamProfileCard: React.FC<TeamProfileCardProps> = ({
+import { DevProfile } from "../../types/instructions";
+const TeamProfileCard: React.FC<DevProfile> = ({
   name,
   image,
   title,
+  linkedIn,
+  github,
 }) => {
   return (
-    <div className="mb-12 lg:mb-0">
+    <div className="about mb-12 lg:mb-0">
       <img
         className="rounded-lg shadow-lg mb-6 mx-auto w-36"
         src={image}
@@ -15,7 +16,7 @@ const TeamProfileCard: React.FC<TeamProfileCardProps> = ({
       <h5 className="text-lg font-bold mb-4">{name}</h5>
       <p className="mb-6">{title}</p>
       <ul className="list-inside flex mx-auto justify-center">
-        <a href="#!" className="px-2">
+        <a href={github} className="px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512"
@@ -27,7 +28,7 @@ const TeamProfileCard: React.FC<TeamProfileCardProps> = ({
             />
           </svg>
         </a>
-        <a href="#!" className="px-2">
+        <a href={linkedIn} className="px-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
