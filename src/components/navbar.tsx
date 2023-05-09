@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
     }
   }, [theme]);
 
-  const handleClick = () => {
+  const handleThemeChange = () => {
     localStorage.setItem(
       "theme",
       theme.theme === "dark"
@@ -39,8 +39,31 @@ const NavBar: React.FC = () => {
     );
   };
 
+  const handleScroll = (id: string) => {
+    switch (id) {
+      case "Setup":
+        document
+          .querySelector<HTMLDivElement>(".setup")!
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Features":
+        document
+          .querySelector<HTMLDivElement>(".features")!
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      // case "Resources":
+      //   document
+      //     .querySelector<HTMLDivElement>(".resources")!
+      //     .scrollIntoView({ behavior: "smooth" });
+      case "About":
+        document
+          .querySelector(".about")
+          ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="navbar bg-base-200 mb-20">
+    <div className="topnav navbar bg-base-200 mb-20">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -64,13 +87,40 @@ const NavBar: React.FC = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Homepage</a>
+              <button
+                onClick={(e) =>
+                  handleScroll((e.target as HTMLButtonElement).innerHTML)
+                }
+              >
+                Setup
+              </button>
             </li>
             <li>
-              <a>Portfolio</a>
+              <button
+                onClick={(e) =>
+                  handleScroll((e.target as HTMLButtonElement).innerHTML)
+                }
+              >
+                Features
+              </button>
             </li>
             <li>
-              <a>About</a>
+              <button
+                onClick={(e) =>
+                  handleScroll((e.target as HTMLButtonElement).innerHTML)
+                }
+              >
+                Resources
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={(e) =>
+                  handleScroll((e.target as HTMLButtonElement).innerHTML)
+                }
+              >
+                About
+              </button>
             </li>
           </ul>
         </div>
@@ -82,7 +132,7 @@ const NavBar: React.FC = () => {
         <input
           type="checkbox"
           className="toggle"
-          onClick={handleClick}
+          onClick={handleThemeChange}
           checked={theme.checked}
         />
         <button className="btn btn-ghost btn-circle">
