@@ -44,3 +44,8 @@ export interface TeamProfileCardProps {
 export interface LayoutProps {
   children: ReactNode;
 }
+
+export interface Theme {
+  theme: string;
+  checked: boolean;
+}

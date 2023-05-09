@@ -1,30 +1,42 @@
 import React, { useState, useEffect } from "react";
+import { Theme } from "../../types/instructions";
 
 // renders server-side, so we need to check if localStorage is available
-const loadTheme = () => {
+const loadTheme = (): Theme => {
+  const defaultTheme = { theme: "light", checked: false };
   if (typeof localStorage === "undefined") {
-    return "light";
+    return defaultTheme;
   }
   const value = localStorage.getItem("theme");
-  return value === null ? "light" : value;
+  return value === null ? defaultTheme : JSON.parse(value);
 };
 
 const NavBar: React.FC = () => {
   const [theme, setTheme] = useState(loadTheme);
 
   useEffect(() => {
-    if (typeof theme === "string") {
-      localStorage.setItem("theme", theme);
+    if (typeof theme === "object") {
+      localStorage.setItem("theme", JSON.stringify(theme));
     }
-    const localTheme = localStorage.getItem("theme");
+    const localTheme = JSON.parse(localStorage.getItem("theme")!).theme;
+
     if (typeof localTheme == "string") {
       document.documentElement.setAttribute("data-theme", localTheme);
     }
   }, [theme]);
 
   const handleClick = () => {
-    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
-    setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem(
+      "theme",
+      theme.theme === "dark"
+        ? JSON.stringify({ theme: "light", checked: false })
+        : JSON.stringify({ theme: "dark", checked: true })
+    );
+    setTheme(
+      theme.theme === "dark"
+        ? { theme: "light", checked: false }
+        : { theme: "dark", checked: true }
+    );
   };
 
   return (
@@ -67,7 +79,12 @@ const NavBar: React.FC = () => {
         <a className="btn btn-ghost normal-case text-3xl">NextWork</a>
       </div>
       <div className="navbar-end">
-        <input type="checkbox" className="toggle" onClick={handleClick} />
+        <input
+          type="checkbox"
+          className="toggle"
+          onClick={handleClick}
+          checked={theme.checked}
+        />
         <button className="btn btn-ghost btn-circle">
           <div className="indicator">
             <svg
