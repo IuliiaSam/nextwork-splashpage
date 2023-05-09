@@ -1,3 +1,5 @@
+import React, { ReactNode } from "react";
+
 export interface ApiData {
   title: string;
   instructions: string[];
@@ -37,4 +39,8 @@ export interface TeamProfileCardProps {
   name: string;
   image: string;
   title: string;
+}
+
+export interface LayoutProps {
+  children: ReactNode;
 }
