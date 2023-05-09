@@ -1,3 +1,4 @@
+import BottomNav from "@/components/bottomNav";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

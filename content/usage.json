@@ -1,0 +1,35 @@
+{
+  "title": "Setup",
+  "instructions": [
+    "Install this package: npm install next-work",
+    "Add our Chrome Extension to your library by downloading it here. The extension creates a new panel in your Chrome Dev Tools that mimics the Network Panel.",
+    "Finally, to include nextWorkFetch in your Next dev environment run npm run nextWorkDev. A script will be automatically created in your package.json."
+  ],
+  "codeExamples": ["npm install next-work", "npm run nextWorkDev"],
+  "packageJson": {
+    "title": "package.json",
+    "script": "\"scripts\": {\"nextWorkDev\": \"node --require .\\/node_modules\\/next-work\\/dist\\/nextWork.js .\\/node_modules\\/\\.bin\\/next dev\"}"
+  },
+  "devProfiles": [
+    {
+      "name": "Jeff Pettis",
+      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg",
+      "title": "Software Engineer"
+    },
+    {
+      "name": "Yulia Sam",
+      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg",
+      "title": "Software Engineer"
+    },
+    {
+      "name": "Annie Blazejack",
+      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg",
+      "title": "Software Engineer"
+    },
+    {
+      "name": "Josephine Ho",
+      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg",
+      "title": "Software Engineer"
+    }
+  ]
+}

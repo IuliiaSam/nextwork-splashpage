@@ -36,7 +36,7 @@ const NavBar: React.FC = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl">NextWork</a>
+        <a className="btn btn-ghost normal-case text-3xl">NextWork</a>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
