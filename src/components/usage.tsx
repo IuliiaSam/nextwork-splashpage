@@ -1,5 +1,6 @@
 import { UsageProps } from "../../types/instructions";
 import Image from "next/image";
+import VideoPlayer from "./videoPlayer";
 
 const Usage: React.FC<UsageProps> = ({ main, features }) => {
   return (
@@ -35,13 +36,22 @@ const Usage: React.FC<UsageProps> = ({ main, features }) => {
           </div>
         </div>
       </div>
-      <Image
+      {/* <Image
         className="md:rounded-xl"
         src="/nextWork.gif"
         alt="nextwork demo"
         width={1000}
         height={800}
-      ></Image>
+      ></Image> */}
+      {/* <video
+        controls={true}
+        autoPlay={true}
+        loop={true}
+        width={1200}
+        height={1000}
+        src="/nextwork-video.mov"
+      ></video> */}
+      <VideoPlayer />
     </div>
   );
 };
