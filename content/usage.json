@@ -1,5 +1,5 @@
 {
-  "title": "Setup",
+  "title": "Setup",  
   "instructions": [
     "Install this package: npm install next-work",
     "Add our Chrome Extension to your library by downloading it here. The extension creates a new panel in your Chrome Dev Tools that mimics the Network Panel.",
@@ -52,5 +52,19 @@
   "additionalResources": {
     "articleDiscussion": "For more information regarding the importance of having access to network request data during development, take a look at our recently published article here.",
     "secondary": "With our NextWork dev panel you can inspect HTTP communications, helping to debug api calls and optimize application performance."
+  },
+  "hero": {
+    "title": "NextWork",
+    "subtitle": "A developer tool for watching HTTP network requests and responses in server-side rendered components.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2834&q=80",
+    "chatBubbles": { 
+      "texts": [
+      "Ah, the joys of being a server - doing all the hard work and getting none of the credit!",
+      "I wonder if the client even knows how much I'm doing for them right now?",
+      "If a request is made on the server and no one is around to see it, did it really happen?",
+      "If I were a superhero, my power would be handling HTTP requests like a boss.",
+      "I may not have a face, but I have a purpose, and that's good enough for me."
+      ]
+    }
   }
 }

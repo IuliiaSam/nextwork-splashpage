@@ -1,5 +1,6 @@
 export interface ApiData {
   title: string;
+  hero: HeroProps;
   instructions: string[];
   codeExamples: string[];
   packageJson: {
@@ -44,4 +45,15 @@ export interface AboutUsProps {
 export interface Theme {
   theme: string;
   checked: boolean;
+}
+
+export interface HeroProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  chatBubbles: ChatBubbles
+}
+
+export interface ChatBubbles {
+  texts: string[];
 }

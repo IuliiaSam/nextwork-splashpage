@@ -4,16 +4,18 @@ import BottomNav from "@/components/bottomNav";
 import { GetStaticProps } from "next";
 import { getHomePageData } from "../../.lib/api";
 import { UsageInstructions, ApiData } from "../../types/instructions";
+import Hero from "@/components/hero";
 import Setup from "@/components/setup";
 import Usage from "@/components/usage";
 import AboutUs from "@/components/aboutUs";
 
 export const getStaticProps: GetStaticProps<ApiData> = async () => {
-  const { title, instructions, codeExamples, packageJson, devProfiles, usage } =
+  const { title, hero, instructions, codeExamples, packageJson, devProfiles, usage } =
     await getHomePageData();
   return {
     props: {
       title,
+      hero,
       instructions,
       codeExamples,
       packageJson,
@@ -25,6 +27,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
 
 const Home: React.FC<ApiData> = ({
   title,
+  hero,
   instructions,
   codeExamples,
   packageJson,
@@ -33,6 +36,12 @@ const Home: React.FC<ApiData> = ({
 }) => {
   return (
     <div>
+      <Hero 
+        title={hero.title}
+        subtitle={hero.subtitle}
+        image={hero.image}
+        chatBubbles={hero.chatBubbles} 
+      />
       <Setup
         title={title}
         instructions={instructions}
