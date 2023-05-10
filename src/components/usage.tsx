@@ -1,5 +1,4 @@
 import { UsageProps } from "../../types/instructions";
-import Image from "next/image";
 import VideoPlayer from "./videoPlayer";
 
 const Usage: React.FC<UsageProps> = ({ main, features }) => {

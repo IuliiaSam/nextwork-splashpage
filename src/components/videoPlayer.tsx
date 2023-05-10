@@ -10,6 +10,7 @@ const VideoPlayer: React.FC = () => {
           if (videoRef.current) {
             if (entry.isIntersecting) {
               videoRef.current.currentTime = 0;
+
               videoRef.current.play();
               videoRef.current.loop = true;
             } else {
@@ -36,6 +37,7 @@ const VideoPlayer: React.FC = () => {
         width={1200}
         height={1200}
         src="/nextwork-video.mov"
+        muted={true}
       ></video>
     </div>
   );
