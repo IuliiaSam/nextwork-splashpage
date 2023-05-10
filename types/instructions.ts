@@ -1,5 +1,6 @@
 export interface ApiData {
   title: string;
+  hero: HeroProps;
   instructions: string[];
   codeExamples: string[];
   packageJson: {
@@ -37,4 +38,15 @@ export interface TeamProfileCardProps {
   name: string;
   image: string;
   title: string;
+}
+
+export interface HeroProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  chatBubbles: ChatBubbles
+}
+
+export interface ChatBubbles {
+  texts: string[];
 }
