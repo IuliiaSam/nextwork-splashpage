@@ -56,9 +56,9 @@ const BottomNav: React.FC = () => {
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M12 4v16m-4-4h8M6 12h12"
           />
         </svg>
@@ -97,30 +97,30 @@ const BottomNav: React.FC = () => {
           <path
             d="M7 21V9H3V21C3 21.55 3.45 22 4 22H6C6.55 22 7 21.55 7 21Z"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M21 21V9H17V21C17 21.55 17.45 22 18 22H20C20.55 22 21 21.55 21 21Z"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7 9H17V5C17 4.45 16.55 4 16 4H8C7.45 4 7 4.45 7 5V9Z"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M5 5V19C5 19.55 5.45 20 6 20H18C18.55 20 19 19.55 19 19V5C19 4.45 18.55 4 18 4H6C5.45 4 5 4.45 5 5Z"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
         <span className="btm-nav-label">Resources</span>
