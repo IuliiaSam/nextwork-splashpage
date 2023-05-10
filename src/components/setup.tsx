@@ -8,8 +8,8 @@ const Setup: React.FC<UsageInstructions> = ({
   packageJson: { title: packageTitle, script },
 }) => {
   return (
-    <div className="setup flex items-center ">
-      <div className="text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
+    <div className="setup flex items-center">
+      <div className="text-base-content mx-auto min-h-screen max-w-full">
         <div className="px-4 text-center md:px-0 mb-20">
           <h2 className="mb-10 text-4xl font-extrabold md:text-3xl">{title}</h2>
           {instructions.map((instruction, index) => {
