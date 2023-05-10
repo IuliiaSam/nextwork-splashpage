@@ -13,7 +13,7 @@
   "devProfiles": [
     {
       "name": "Jeff Pettis",
-      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg",
+      "image": "/jeff.jpeg",
       "title": "Software Engineer",
       "linkedIn": "https://www.linkedin.com/in/jeffreypettis/",
       "github": "https://github.com/jpettis1"
