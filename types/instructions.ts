@@ -8,12 +8,20 @@ export interface ApiData {
     script: string;
   };
   devProfiles: DevProfile[];
+  usage: UsageProps;
+}
+
+export interface UsageProps {
+  main: string;
+  features: string[];
 }
 
 export interface DevProfile {
   name: string;
   image: string;
   title: string;
+  linkedIn: string;
+  github: string;
 }
 
 export interface UsageInstructions {
@@ -34,10 +42,9 @@ export interface AboutUsProps {
   devProfiles: DevProfile[];
 }
 
-export interface TeamProfileCardProps {
-  name: string;
-  image: string;
-  title: string;
+export interface Theme {
+  theme: string;
+  checked: boolean;
 }
 
 export interface HeroProps {

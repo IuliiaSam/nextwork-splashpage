@@ -13,25 +13,46 @@
   "devProfiles": [
     {
       "name": "Jeff Pettis",
-      "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg",
-      "title": "Software Engineer"
+      "image": "/jeff.jpeg",
+      "title": "Software Engineer",
+      "linkedIn": "https://www.linkedin.com/in/jeffreypettis/",
+      "github": "https://github.com/jpettis1"
     },
     {
       "name": "Yulia Sam",
       "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg",
-      "title": "Software Engineer"
+      "title": "Software Engineer",
+      "linkedIn": "https://www.linkedin.com/in/iuliia-samokhvalova/",
+      "github": "https://github.com/IuliiaSam"
     },
     {
       "name": "Annie Blazejack",
       "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg",
-      "title": "Software Engineer"
+      "title": "Software Engineer",
+      "linkedIn": "https://www.linkedin.com/in/annieblazejack/",
+      "github": "https://github.com/annieblazejack"
     },
     {
       "name": "Josephine Ho",
       "image": "https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg",
-      "title": "Software Engineer"
+      "title": "Software Engineer",
+      "linkedIn": "https://www.linkedin.com/in/findjo/",
+      "github": "https://github.com/imjho"
     }
-  ],  
+  ],
+  "usage": {
+    "main": "Usage/Features",
+    "features": [
+      "Inspect HTTP communications",
+      "Debug api calls",
+      "View application performance",
+      "Works with Node V19 and below..."
+    ]
+  },
+  "additionalResources": {
+    "articleDiscussion": "For more information regarding the importance of having access to network request data during development, take a look at our recently published article here.",
+    "secondary": "With our NextWork dev panel you can inspect HTTP communications, helping to debug api calls and optimize application performance."
+  },
   "hero": {
     "title": "NextWork",
     "subtitle": "A developer tool for watching HTTP network requests and responses in server-side rendered components.",
