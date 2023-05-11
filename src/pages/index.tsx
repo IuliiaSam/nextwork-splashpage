@@ -10,8 +10,16 @@ import Usage from "@/components/usage";
 import AboutUs from "@/components/aboutUs";
 
 export const getStaticProps: GetStaticProps<ApiData> = async () => {
-  const { title, hero, instructions, codeExamples, packageJson, devProfiles, usage } =
-    await getHomePageData();
+  const {
+    title,
+    hero,
+    instructions,
+    codeExamples,
+    packageJson,
+    devProfiles,
+    usage,
+    videoPlayer,
+  } = await getHomePageData();
   return {
     props: {
       title,
@@ -21,6 +29,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
       packageJson,
       devProfiles,
       usage,
+      videoPlayer,
     },
   };
 };
@@ -33,14 +42,15 @@ const Home: React.FC<ApiData> = ({
   packageJson,
   devProfiles,
   usage,
+  videoPlayer,
 }) => {
   return (
     <div>
-      <Hero 
+      <Hero
         title={hero.title}
         subtitle={hero.subtitle}
         image={hero.image}
-        chatBubbles={hero.chatBubbles} 
+        chatBubbles={hero.chatBubbles}
       />
       <Setup
         title={title}
@@ -48,7 +58,7 @@ const Home: React.FC<ApiData> = ({
         codeExamples={codeExamples}
         packageJson={packageJson}
       />
-      <Usage {...usage} />
+      <Usage {...usage} videoPlayer={videoPlayer} />
       <AboutUs devProfiles={devProfiles} />
     </div>
   );
