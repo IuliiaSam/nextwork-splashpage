@@ -51,10 +51,10 @@ const NavBar: React.FC = () => {
           .querySelector<HTMLDivElement>(".features")!
           .scrollIntoView({ behavior: "smooth" });
         break;
-      // case "Resources":
-      //   document
-      //     .querySelector<HTMLDivElement>(".resources")!
-      //     .scrollIntoView({ behavior: "smooth" });
+      case "Resources":
+        document
+          .querySelector<HTMLDivElement>(".resources")!
+          .scrollIntoView({ behavior: "smooth" });
       case "About":
         document
           .querySelector(".about")
@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="topnav navbar bg-base-200 mb-20">
+    <div className="topnav navbar bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">

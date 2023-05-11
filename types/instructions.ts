@@ -9,6 +9,7 @@ export interface ApiData {
   };
   devProfiles: DevProfile[];
   usage: UsageProps;
+  resources: ResourcesProps;
 }
 
 export interface UsageProps {
@@ -56,4 +57,15 @@ export interface HeroProps {
 
 export interface ChatBubbles {
   texts: string[];
+}
+
+export interface ResourceCardProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  link: string;
+}
+
+export interface ResourcesProps {
+  resourceCards: ResourceCardProps[];
 }

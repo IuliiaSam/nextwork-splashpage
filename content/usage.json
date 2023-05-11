@@ -66,5 +66,27 @@
       "I may not have a face, but I have a purpose, and that's good enough for me."
       ]
     }
+  },
+  "resources": {
+    "resourceCards": [
+      {
+        "title": "Medium article",
+        "subtitle": "Our tool gives developers back the power of the Chrome Network Tab features for server-side API calls.",
+        "image": "https://kinsta.com/wp-content/uploads/2020/11/application-performance-monitoring.png",
+        "link": "https://medium.com/"
+      },
+      {
+        "title": "Next.js rearchitects router for smoother server-side rendering",
+        "subtitle": "Now stable in Next.js 13.4, the new App Router builds on React Server Components and React Suspense to improve data fetching, page loading, and the developer experience.",
+        "image": "https://images.idgesg.net/images/article/2017/06/reactjs_code_coding_thinkstock-100725807-large.jpg?auto=webp&quality=85,70",
+        "link": "https://www.infoworld.com/article/3695595/nextjs-rearchitects-router-for-smoother-server-side-rendering.html"
+      }, 
+      {
+        "title": "Client-Side Vs. Server-Side Rendering",
+        "subtitle": "Learn when you should choose CSR or SSR based on how it will impact your SERP position and your website’s user experience.",
+        "image": "https://www.searchenginejournal.com/wp-content/uploads/2023/03/client-side-vs-server-side-rendering--6419b9f00612a-sej-760x400.webp",
+        "link": "https://www.searchenginejournal.com/client-side-vs-server-side/482574/"
+      }
+    ]
   }
 }
