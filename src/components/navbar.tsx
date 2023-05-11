@@ -55,6 +55,7 @@ const NavBar: React.FC = () => {
         document
           .querySelector<HTMLDivElement>(".resources")!
           .scrollIntoView({ behavior: "smooth" });
+        break;
       case "About":
         document
           .querySelector(".about")
@@ -129,7 +130,12 @@ const NavBar: React.FC = () => {
         {/* <a className="btn btn-ghost normal-case text-3xl">
           NextWork
         </a> */}
-        <Image alt='NextWork logo' src='/NextWork_logo.png' width={150} height={30}></Image>
+        <Image
+          alt="NextWork logo"
+          src="/NextWork_logo.png"
+          width={150}
+          height={30}
+        ></Image>
       </div>
       <div className="navbar-end">
         <input

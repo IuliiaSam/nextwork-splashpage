@@ -17,11 +17,12 @@ const BottomNav: React.FC = () => {
           .querySelector<HTMLDivElement>(".usage")!
           .scrollIntoView({ behavior: "smooth" });
         break;
-      case "Test":
-        console.log('test case fired');
+      case "Resources":
+        console.log("test case fired");
         document
-          .querySelector<HTMLDivElement>(".test")!
+          .querySelector<HTMLDivElement>(".resources")!
           .scrollIntoView({ behavior: "smooth" });
+        break;
       case "About":
         document
           .querySelector(".about")
@@ -88,7 +89,7 @@ const BottomNav: React.FC = () => {
         </svg>
         <span className="btm-nav-label">Usage</span>
       </button>
-      <button onClick={(e) => handleScroll("Test")}>
+      <button onClick={(e) => handleScroll("Resources")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
