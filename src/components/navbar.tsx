@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Theme } from "../../types/instructions";
-
+import Image from "next/image";
 // renders server-side, so we need to check if localStorage is available
 const loadTheme = (): Theme => {
   const defaultTheme = { theme: "light", checked: false };
@@ -126,7 +126,10 @@ const NavBar: React.FC = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-3xl">NextWork</a>
+        {/* <a className="btn btn-ghost normal-case text-3xl">
+          NextWork
+        </a> */}
+        <Image alt='NextWork logo' src='/NextWork_logo.png' width={150} height={30}></Image>
       </div>
       <div className="navbar-end">
         <input

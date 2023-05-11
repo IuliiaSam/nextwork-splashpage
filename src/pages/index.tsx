@@ -1,15 +1,11 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import BottomNav from "@/components/bottomNav";
 import { GetStaticProps } from "next";
 import { getHomePageData } from "../../.lib/api";
-import { UsageInstructions, ApiData } from "../../types/instructions";
+import { ApiData } from "../../types/instructions";
 import Hero from "@/components/hero";
 import Setup from "@/components/setup";
 import Usage from "@/components/usage";
 import AboutUs from "@/components/aboutUs";
 import Resources from "@/components/resources";
-import { log } from "console";
 
 export const getStaticProps: GetStaticProps<ApiData> = async () => {
   const {

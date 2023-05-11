@@ -1,11 +1,14 @@
 import { UsageProps } from "../../types/instructions";
 import VideoPlayer from "./videoPlayer";
-
+// from-primary
+// to-accent 
+// 
 const Usage: React.FC<UsageProps> = ({ main, features, videoPlayer }) => {
-  return (
-    <div className="features hero flex flex-col gap-10 justify-center from-primary md:p-7 to-accent text-primary-content min-h-screen bg-gray-600">
-      <div className="text-base-content glass md:rounded-box flex justify-center min-w-full min-h-gap-4 bg-opacity-60 xl:pb-0">
-        <div className="hero-content flex justify-center flex-col px-4 ">
+    return (
+    <div className="hero features usage-color flex flex-col gap-10 justify-center  md:p-7 text-primary-content min-h-screen bg-accent">
+
+      {/* <div className="glass md:rounded-box flex justify-center min-w-full min-h-gap-4 bg-opacity-60 xl:pb-0"> */}
+        <div className="hero-content flex flex-col justify-center  px-4 ">
           <h2 className="m5-20 mb-2 text-lg md:text-4xl font-extrabold">
             {main}
           </h2>
@@ -34,7 +37,7 @@ const Usage: React.FC<UsageProps> = ({ main, features, videoPlayer }) => {
             })}
           </div>
         </div>
-      </div>
+      {/* </div> */}
       <VideoPlayer {...videoPlayer} />
     </div>
   );
