@@ -5,7 +5,7 @@ import VideoPlayer from "./videoPlayer";
 // 
 const Usage: React.FC<UsageProps> = ({ main, features, videoPlayer }) => {
     return (
-    <div className="hero features usage-color flex flex-col gap-10 justify-center  md:p-7 text-primary-content min-h-screen bg-accent">
+    <div className="hero usage usage-color flex flex-col gap-10 justify-center  md:p-7 text-primary-content min-h-screen bg-accent">
 
       {/* <div className="glass md:rounded-box flex justify-center min-w-full min-h-gap-4 bg-opacity-60 xl:pb-0"> */}
         <div className="hero-content flex flex-col justify-center  px-4 ">

@@ -46,9 +46,9 @@ const NavBar: React.FC = () => {
           .querySelector<HTMLDivElement>(".setup")!
           .scrollIntoView({ behavior: "smooth" });
         break;
-      case "Features":
+      case "Usage":
         document
-          .querySelector<HTMLDivElement>(".features")!
+          .querySelector<HTMLDivElement>(".usage")!
           .scrollIntoView({ behavior: "smooth" });
         break;
       case "Resources":
@@ -101,7 +101,7 @@ const NavBar: React.FC = () => {
                   handleScroll((e.target as HTMLButtonElement).innerHTML)
                 }
               >
-                Features
+                Usage
               </button>
             </li>
             <li>
