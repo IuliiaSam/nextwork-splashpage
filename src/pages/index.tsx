@@ -15,7 +15,8 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
     codeExamples,
     packageJson,
     devProfiles,
-    usage, resources,
+    usage,
+    resources,
     videoPlayer,
   } = await getHomePageData();
   return {
@@ -43,7 +44,7 @@ const Home: React.FC<ApiData> = ({
   usage,
   videoPlayer,
   resources,
-}) => {  
+}) => {
   return (
     <div>
       <Hero

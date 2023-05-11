@@ -78,7 +78,7 @@
     }
   },
   "videoPlayer": {
-    "videoUrl": "/nextwork-video.mov",
+    "videoUrl": "/nextWorkDemo.mov",
     "imageUrl": "/error-image-not-found.jpeg"
   },
   "resources": {
@@ -94,7 +94,7 @@
         "subtitle": "Now stable in Next.js 13.4, the new App Router builds on React Server Components and React Suspense to improve data fetching, page loading, and the developer experience.",
         "image": "https://images.idgesg.net/images/article/2017/06/reactjs_code_coding_thinkstock-100725807-large.jpg?auto=webp&quality=85,70",
         "link": "https://www.infoworld.com/article/3695595/nextjs-rearchitects-router-for-smoother-server-side-rendering.html"
-      }, 
+      },
       {
         "title": "Client-Side Vs. Server-Side Rendering",
         "subtitle": "Learn when you should choose CSR or SSR based on how it will impact your SERP position and your website’s user experience.",
