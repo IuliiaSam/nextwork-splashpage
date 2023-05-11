@@ -9,12 +9,14 @@ export interface ApiData {
   };
   devProfiles: DevProfile[];
   usage: UsageProps;
-  videoPlayer: videoPlayerProps;
+  videoPlayer: videoPlayerProps;  
+  resources: ResourcesProps;
 }
 
 export interface videoPlayerProps {
   videoUrl: string;
   imageUrl: string;
+
 }
 
 export interface UsageProps {
@@ -63,4 +65,15 @@ export interface HeroProps {
 
 export interface ChatBubbles {
   texts: string[];
+}
+
+export interface ResourceCardProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  link: string;
+}
+
+export interface ResourcesProps {
+  resourceCards: ResourceCardProps[];
 }

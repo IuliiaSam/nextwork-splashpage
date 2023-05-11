@@ -8,6 +8,8 @@ import Hero from "@/components/hero";
 import Setup from "@/components/setup";
 import Usage from "@/components/usage";
 import AboutUs from "@/components/aboutUs";
+import Resources from "@/components/resources";
+import { log } from "console";
 
 export const getStaticProps: GetStaticProps<ApiData> = async () => {
   const {
@@ -17,7 +19,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
     codeExamples,
     packageJson,
     devProfiles,
-    usage,
+    usage, resources,
     videoPlayer,
   } = await getHomePageData();
   return {
@@ -30,6 +32,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
       devProfiles,
       usage,
       videoPlayer,
+      resources,
     },
   };
 };
@@ -43,7 +46,8 @@ const Home: React.FC<ApiData> = ({
   devProfiles,
   usage,
   videoPlayer,
-}) => {
+  resources,
+}) => {  
   return (
     <div>
       <Hero
@@ -59,6 +63,7 @@ const Home: React.FC<ApiData> = ({
         packageJson={packageJson}
       />
       <Usage {...usage} videoPlayer={videoPlayer} />
+      <Resources {...resources} />
       <AboutUs devProfiles={devProfiles} />
     </div>
   );

@@ -51,10 +51,10 @@ const NavBar: React.FC = () => {
           .querySelector<HTMLDivElement>(".features")!
           .scrollIntoView({ behavior: "smooth" });
         break;
-      // case "Resources":
-      //   document
-      //     .querySelector<HTMLDivElement>(".resources")!
-      //     .scrollIntoView({ behavior: "smooth" });
+      case "Resources":
+        document
+          .querySelector<HTMLDivElement>(".resources")!
+          .scrollIntoView({ behavior: "smooth" });
       case "About":
         document
           .querySelector(".about")

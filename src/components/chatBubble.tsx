@@ -27,7 +27,7 @@ const ChatBubble: React.FC<ChatBubbles> = ({texts}) => {
     <div className={chatClasses}>
       <div className={chatBubbleClasses}>
         {chatBubbleText}
-        <span className="text-sm font-medium italic"> Yours, Server
+        <span className="text-sm font-medium italic"> --Server
         </span>
       </div>
     </div>     
