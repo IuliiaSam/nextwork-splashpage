@@ -1,5 +1,6 @@
 export interface ApiData {
   title: string;
+  getStarted: string;
   hero: HeroProps;
   instructions: string[];
   codeExamples: string[];
@@ -9,14 +10,13 @@ export interface ApiData {
   };
   devProfiles: DevProfile[];
   usage: UsageProps;
-  videoPlayer: videoPlayerProps;  
+  videoPlayer: videoPlayerProps;
   resources: ResourcesProps;
 }
 
 export interface videoPlayerProps {
   videoUrl: string;
   imageUrl: string;
-
 }
 
 export interface UsageProps {
@@ -58,6 +58,7 @@ export interface Theme {
 
 export interface HeroProps {
   title: string;
+  getStarted: string;
   subtitle: string;
   image: string;
   chatBubbles: ChatBubbles;

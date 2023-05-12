@@ -10,6 +10,7 @@ import Resources from "@/components/resources";
 export const getStaticProps: GetStaticProps<ApiData> = async () => {
   const {
     title,
+    getStarted,
     hero,
     instructions,
     codeExamples,
@@ -22,6 +23,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
   return {
     props: {
       title,
+      getStarted,
       hero,
       instructions,
       codeExamples,
@@ -36,6 +38,7 @@ export const getStaticProps: GetStaticProps<ApiData> = async () => {
 
 const Home: React.FC<ApiData> = ({
   title,
+  getStarted,
   hero,
   instructions,
   codeExamples,
@@ -49,6 +52,7 @@ const Home: React.FC<ApiData> = ({
     <div>
       <Hero
         title={hero.title}
+        getStarted={getStarted}
         subtitle={hero.subtitle}
         image={hero.image}
         chatBubbles={hero.chatBubbles}

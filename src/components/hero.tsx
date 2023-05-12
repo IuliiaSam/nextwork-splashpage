@@ -2,7 +2,13 @@ import { HeroProps } from "../../types/instructions";
 import dynamic from "next/dynamic";
 const ChatBubble = dynamic(() => import("./chatBubble"), { ssr: false });
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, image, chatBubbles }) => {
+const Hero: React.FC<HeroProps> = ({
+  title,
+  getStarted,
+  subtitle,
+  image,
+  chatBubbles,
+}) => {
   return (
     <div
       className="hero min-h-screen grid-rows-3 mb-20"
@@ -14,7 +20,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image, chatBubbles }) => {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">{title}</h1>
           <p className="mb-5">{subtitle}</p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary">
+            <a href={getStarted}>Get Started</a>
+          </button>
         </div>
       </div>
     </div>
