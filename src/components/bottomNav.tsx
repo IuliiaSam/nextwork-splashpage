@@ -31,7 +31,7 @@ const BottomNav: React.FC = () => {
   };
 
   return (
-    <div className="sticky btm-nav">
+    <div className="btm-nav sticky">
       <button onClick={(e) => handleScroll("Home")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

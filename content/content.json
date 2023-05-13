@@ -57,7 +57,7 @@
   "hero": {
     "title": "NextWork",
     "subtitle": "A developer tool for watching HTTP network requests and responses in server-side rendered components",
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2834&q=80",
+    "image": "/hero-image.avif",
     "chatBubbles": {
       "texts": [
         "Ah, the joys of being a server - doing all the hard work and getting none of the credit!",
@@ -79,7 +79,7 @@
     }
   },
   "videoPlayer": {
-    "videoUrl": "/nextWorkDemo.mov",
+    "videoUrl": "/nextwork-demo.mov",
     "imageUrl": "/error-image-not-found.jpeg"
   },
   "resources": {

@@ -12,7 +12,7 @@ const VideoPlayer: React.FC<videoPlayerProps> = ({ videoUrl, imageUrl }) => {
           if (videoRef.current) {
             if (entry.isIntersecting) {
               videoRef.current.currentTime = 0;
-              videoRef.current.play();
+              // videoRef.current.play();
               videoRef.current.loop = true;
             } else {
               videoRef.current.loop = false;
@@ -56,6 +56,7 @@ const VideoPlayer: React.FC<videoPlayerProps> = ({ videoUrl, imageUrl }) => {
           height={1200}
           muted={true}
           onError={handleVideoError}
+          controls={true}
         ></video>
       )}
     </div>
