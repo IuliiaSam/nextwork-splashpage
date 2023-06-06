@@ -13,6 +13,3 @@ const MockUpCode: React.FC<MockUpCodeProps> = ({ codeExample }) => {
 };
 
 export default MockUpCode;
-
-// w - full;
-// mx - auto;

@@ -13,14 +13,24 @@ const Setup: React.FC<UsageInstructions> = ({
         <div className="px-4 text-center md:px-0 mb-20">
           <h2 className="mb-10 text-4xl font-extrabold md:text-3xl">{title}</h2>
           {instructions.map((instruction, index) => {
-            return (
-              <p
-                key={`instruction${index}`}
-                className="mx-auto mb-5 w-full max-w-lg"
-              >
-                {instruction}
-              </p>
-            );
+            if (index === 1) {
+              return (
+                <p
+                  key={`instruction${index}`}
+                  className="mx-auto mb-5 w-full max-w-lg"
+                  dangerouslySetInnerHTML={{ __html: instruction }}
+                ></p>
+              );
+            } else {
+              return (
+                <p
+                  key={`instruction${index}`}
+                  className="mx-auto mb-5 w-full max-w-lg"
+                >
+                  {instruction}
+                </p>
+              );
+            }
           })}
           <div className="mb-20 flex flex-col lg:flex-row">
             <MockUpCode codeExample={codeExamples[0]} />
